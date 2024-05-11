@@ -1,0 +1,29 @@
+{
+  "name": "projeto_alura",
+  "version": "1.0.0",
+  "description": "AI Gemini countries quiz ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA.git"
+  },
+  "author": "Héber Stavrakas Gaipo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/issues"
+  },
+  "homepage": "https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.11.1",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "hbs": "^4.2.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  }
+}
