@@ -16,47 +16,114 @@ body {
 body {
     margin: 0;
     padding: 0;
-    background-color: #007bff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: "Ubuntu Sans", sans-serif;
     font-size: 1.28em;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
 }
 
 div#container {
     height: 65rem;
-    max-height: 65rem;
-    padding: .6rem 0;
     width: 80rem;
-    background-color: #28a745;
+    padding: 0.6rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 0.8rem;
     align-items: center;
     border-radius: 12px;
+    background-color: #28a745;
+}
+
+div#container h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px black;
+}
+
+h2#country-name {
+    font-size: 2rem;
 }
 
 div#container img {
     max-width: 450px;
+    box-shadow: 0px 0px 5px white;
 }
 
-div#container h1 {
-    font-size: 2em;
-    margin: 1.2rem;
-    font-weight: 700;
-}
-
-div#container #hint {
-    font-size: 1.2em;
-    margin: 1.2rem;
+div#container h1,
+div#container #hint,
+div#container #summary {
+    margin: 0;
+    padding: 1.2rem;
     text-align: center;
     font-weight: 700;
+}
+
+#container #hint,
+#container #summary,
+#container #buttons {
+    background-color: green;
+    border-radius: 6px;
 }
 
 div#container #summary {
-    font-size: 1.2em;
-    margin: 1.2rem;
+    margin: 0px 1.2rem;
+}
+
+div#container #buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* Estilo dos botões */
+.quiz-button {
+    background-color: #4CAF50;
+    /* Cor de fundo verde */
+    border: none;
+    /* Sem borda */
+    color: white;
+    /* Texto branco */
+    padding: 15px 32px;
+    /* Espaçamento interno */
     text-align: center;
+    /* Texto centralizado */
+    text-decoration: none;
+    /* Sem decoração de texto */
+    display: inline-block;
+    /* Elemento de bloco inline */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    margin: 10px;
+    /* Margem */
+    cursor: pointer;
+    /* Cursor de ponteiro */
+    border-radius: 5px;
+    /* Cantos arredondados */
+    transition: background-color 0.3s;
+    /* Transição suave na mudança de cor de fundo */
+}
+
+/* Efeito hover */
+.quiz-button:hover {
+    background-color: #3e8e41;
+    /* Cor de fundo verde mais escura ao passar o mouse */
+}
+
+/* Sombra */
+.quiz-button {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+}
+
+/* Efeito de sombra ao passar o mouse */
+.quiz-button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+    /* Sombra mais intensa ao passar o mouse */
 }

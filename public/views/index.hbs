@@ -9,14 +9,27 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="../icon/favicon.ico" type="image/x-icon">
     <title>Quiz Educacional: Países</title>
   </head>
   <body>
     <div id="container">
       <h1>QUIZ EDUCACIONAL: PAÍSES</h1>
+      <h2 id="country-name" style="visibility: hidden;">{{country}}</h2>
       <img src="{{url}}" alt="" srcset="" />
       <p id="hint">{{hint}}</p>
-      <p id="summary">{{summary}}</p>
+      <p id="summary" style="visibility: hidden;">{{summary}}</p>
+
+      <div id="buttons">
+        {{#each buttons}}
+          <button onclick="submitAnswer()" class="quiz-button">{{this}}</button>
+        {{/each}}
+      </div>
     </div>
+    <script>
+      function submitAnswer() { const summary = document.getElementById('summary'); const country_name =
+      document.getElementById("country-name"); summary.style.visibility = "visible" ; country_name.style.visibility =
+      "visible"; summary.style.visibility };
+    </script>
   </body>
 </html>

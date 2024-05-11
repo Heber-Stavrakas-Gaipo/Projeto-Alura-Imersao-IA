@@ -19,11 +19,13 @@
   "homepage": "https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA#readme",
   "dependencies": {
     "@google/generative-ai": "^0.11.1",
+    "body-parser": "^1.20.2",
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
     "hbs": "^4.2.0",
     "path": "^0.12.7",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "serve-favicon": "^2.5.0"
   }
 }

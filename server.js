@@ -1,9 +1,15 @@
 const express = require("express");
-const hbs = require("hbs");
 const path = require("path");
+const favicon = require("serve-favicon");
+const hbs = require("hbs");
 const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
 const request = require("request");
 const cheerio = require("cheerio");
+
+const app = new express();
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
 
 const fs = require("fs");
 const countries = JSON.parse(fs.readFileSync("./countries.json", "utf8"));
@@ -11,11 +17,11 @@ const API_KEY = require("./api_key.js");
 
 const wiki_URL = "https://pt.wikipedia.org/wiki/";
 
-const app = new express();
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "/public/views"));
+app.use(favicon(path.join(__dirname, "icon", "favicon.ico")));
 
 app.get("/", async (req, res) => {
   let country_name = "";
@@ -71,7 +77,9 @@ app.get("/", async (req, res) => {
       { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
     ];
     const chat = model.startChat({ generationConfig, safetySettings });
-    const result = await chat.sendMessage(`Escreva uma dica em uma frase sobre ${country_name}, mas que não contenha a palavra ${country_name}`);
+    const result = await chat.sendMessage(
+      `Escreva uma dica em uma frase sobre ${country_name}, mas que não contenha a palavra ${country_name}`
+    );
     // Remove os caracteres # e *
     let hintTextWithoutMarkups = result.response.text().replace(/[#*]/g, "");
 
@@ -89,11 +97,25 @@ app.get("/", async (req, res) => {
       const page_content = await getWikiContent(country_name);
       const summary = await generateSummary(page_content);
       const hint = await generateHint(country_name);
+      // Gerar botões de resposta
+      let buttonCountries = [country_name];
+      while (buttonCountries.length < 4) {
+        let randomCountry = countries[Math.floor(Math.random() * countries.length)].nome;
+        if (!buttonCountries.includes(randomCountry)) {
+          buttonCountries.push(randomCountry);
+        }
+      }
+      // Embaralhar a ordem dos botões
+      for (let i = buttonCountries.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [buttonCountries[i], buttonCountries[j]] = [buttonCountries[j], buttonCountries[i]];
+      }
       res.render("index.hbs", {
         country: country_name,
         summary: summary,
         hint: hint,
         url: imgURL,
+        buttons: buttonCountries,
       });
     } catch (error) {
       console.error("Erro:", error);
