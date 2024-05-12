@@ -52,6 +52,8 @@ Relacionado ao web scrapping, o conteúdo da página Wikipédia é armazenado na
 
 O ```page_content``` também recebe tratamento para remover os caracteres especiais de Markdown que recebe no output.
 
+Com esse método, por mais que um país seja sorteado mais de uma vez, a dica e a curiosidade será sempre uma novidade!
+
 ## Tecnologias
 <div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px">
   <img aLign="center" alt="ExpressJS" src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" />
