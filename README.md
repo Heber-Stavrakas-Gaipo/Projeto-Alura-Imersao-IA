@@ -33,6 +33,8 @@ Meu nome é Héber Stavrakas Gaipo, sou estudante de Engenharia da Computação 
 ## Objetivo
 O objetivo desse projeto é, utilizando a IA Generativa do Google, gerar um quiz com fins educativos sobre países, trazendo dicas e curiosidades geradas artificialmente com base em web-scrapping.
 
+Através desse método pode se gerar rotas com quizes sobre diversos assuntos, principalmente de fins escolares.
+
 <div aLign="center">
 
   ![image](https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/assets/134441744/27964152-fd60-4b26-aa1c-ff7059855488)
