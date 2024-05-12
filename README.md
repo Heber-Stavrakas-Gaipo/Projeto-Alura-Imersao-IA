@@ -48,6 +48,10 @@ Quando a página inicia é sortido um índice dentro do arquivo `countries.json`
 
 É solicitado para a API do Gemini que gere uma dica, da seguinte forma: `` const result = await chat.sendMessage(`Escreva uma dica em uma frase sobre ${country_name}, mas que não contenha a palavra ${country_name}`); ``.
 
+A imagem gerada no frontend recebe o src como ```https://static.significados.com.br/flags/``` incluindo o sufixo relacionado com a ```sigla2``` presente no mesmo índice do ```country_name``` em ```countries.json``` e é armazenada em ```countrySG```:
+  - ```const imgURL = `https://static.significados.com.br/flags/${countrySG.toLowerCase()}.svg`;```
+  - Esse link segue o mesmo padrão para todas as siglas dos países em letras minúsculas (```.toLowerCase()```) 
+
 Com o `country_name` é feito um tratamento da variável para que se inclua no endereço da Wikipédia, que segue um padrão, sendo `https://pt.wikipedia.org/wiki/ + Nome_Do_País`.
 
 Relacionado ao web scraping, o conteúdo da página Wikipédia é armazenado na variável `page_content` e a curiosidade gerada na tela depois de submetida a resposta do quiz é gerada pelo comando `` const result = await chat.sendMessage(`Escreva uma breve curiosidade sobre ${page_content}`); ``
