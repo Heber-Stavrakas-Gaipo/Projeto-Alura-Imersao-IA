@@ -78,7 +78,7 @@ app.get("/", async (req, res) => {
       { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
     ];
     const chat = model.startChat({ generationConfig, safetySettings });
-    const result = await chat.sendMessage(`Escreva uma breve curiosidade sobre ${page_content}`);
+    const result = await chat.sendMessage(`Escreva uma breve curiosidade sobre "${page_content}" apenas utilizando o conteúdo do texto. Adote um linguajar interessante e carismático.`);
     // Remove os caracteres # e *
     let summaryTextWithoutMarkups = result.response.text().replace(/[#*]/g, "");
 
@@ -93,7 +93,7 @@ app.get("/", async (req, res) => {
    * @param {string} country_name - The name of the country.
    * @returns {Promise<string>} - A promise that resolves to the generated hint.
    */
-  async function generateHint(country_name) {
+  async function generateHint(country_name, page_content) {
     const MODEL_NAME = "gemini-1.5-pro-latest";
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: MODEL_NAME });
@@ -106,7 +106,7 @@ app.get("/", async (req, res) => {
     ];
     const chat = model.startChat({ generationConfig, safetySettings });
     const result = await chat.sendMessage(
-      `Escreva uma dica em uma frase sobre ${country_name}, mas que não contenha a palavra ${country_name}`
+      `Escreva uma dica em uma frase sobre "${country_name}", mas que não contenha a palavra "${country_name}". Extraia essa informação do texto "${page_content}", sem incluir informações que não estejam presentes nele.`
     );
     // Remove # e *
     let hintTextWithoutMarkups = result.response.text().replace(/[#*]/g, "");
@@ -131,7 +131,7 @@ app.get("/", async (req, res) => {
     try {
       const page_content = await getWikiContent(country_name);
       const summary = await generateSummary(page_content);
-      const hint = await generateHint(country_name);
+      const hint = await generateHint(country_name, page_content);
       // generate buttons
       let buttonCountries = [country_name];
       while (buttonCountries.length < 4) {

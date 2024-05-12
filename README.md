@@ -2,7 +2,7 @@
 
 <div aLign="center">
   
-  ![image](https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/assets/134441744/363f9892-57f5-456e-8fc8-47847b2926e9)
+  ![brasil_flag](./public/images/BrasilFlag.png)
   
 </div>
 
@@ -38,7 +38,7 @@ Através desse método pode se gerar rotas com quizes sobre diversos assuntos, p
 
 <div aLign="center">
 
-![image](https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/assets/134441744/27964152-fd60-4b26-aa1c-ff7059855488)
+![BrasilFlag_with_curiosity](./public/images/BrasilFlagCuriosity.png)
 
 </div>
 
@@ -105,8 +105,10 @@ Arquivos mencionados na seção:
 ## Exemplos
 
 <div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px;">
-  <img style="width: 500px;" alt="Brunei" src="https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/assets/134441744/418159f1-474c-42a7-8001-37eea0d226bb" />
-  <img style="width: 500px;" alt="Macau" src="https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/assets/134441744/4cdc5b77-d738-48cb-8ac9-944d9671eddc" />
-  <img style="width: 500px;" alt="Haiti" src="https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/assets/134441744/e6f20c30-ea46-432e-b021-19da0e9ba616" />
-  <img style="width: 500px;" alt="China" src="https://github.com/Heber-Stavrakas-Gaipo/Projeto-Alura-Imersao-IA/assets/134441744/a7432790-b6a9-4f3c-aa6f-0d7efe99481e" />
+  <img style="width: 500px;" alt="Chile" src="./public/images/Chile.png" />
+  <img style="width: 500px;" alt="Equador" src="./public/images/Equador.png" />
+  <img style="width: 500px;" alt="Gana" src="./public/images/Gana.png" />
+  <img style="width: 500px;" alt="Honduras" src="./public/images/Honduras.png" />
+  <img style="width: 500px;" alt="Kuwait" src="./public/images/Kuwait.png" />
+  <img style="width: 500px;" alt="Noruega" src="./public/images/Noruega.png" />
 </div>
