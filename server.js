@@ -21,7 +21,7 @@ const wiki_URL = "https://pt.wikipedia.org/wiki/";
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "/public/views"));
-app.use(favicon(path.join(__dirname, "icon", "favicon.ico")));
+app.use(favicon(path.join(__dirname, "public", "icon", "favicon.ico")));
 
 app.get("/", async (req, res) => {
   let country_name = "";
