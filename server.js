@@ -1,3 +1,4 @@
+// import necessary libraries
 const express = require("express");
 const path = require("path");
 const favicon = require("serve-favicon");
@@ -5,26 +6,41 @@ const hbs = require("hbs");
 const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
 const request = require("request");
 const cheerio = require("cheerio");
+const bodyParser = require("body-parser");
+const fs = require("fs");
 
+// init app
 const app = new express();
 
-const bodyParser = require("body-parser");
+// configure middlewares
 app.use(bodyParser.json());
-
-const fs = require("fs");
-const countries = JSON.parse(fs.readFileSync("./countries.json", "utf8"));
-const API_KEY = require("./api_key.js");
-
-const wiki_URL = "https://pt.wikipedia.org/wiki/";
-
-
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "/public/views"));
 app.use(favicon(path.join(__dirname, "public", "icon", "favicon.ico")));
 
+// load API Key and country data
+const API_KEY = require("./api_key.js");
+const countries = JSON.parse(fs.readFileSync("./countries.json", "utf8"));
+const wiki_URL = "https://pt.wikipedia.org/wiki/";
+
+/**
+ * Express route handler for the home page.
+ * Fetches a random country, fetches its Wikipedia content, generates a summary and hint using Generative AI,
+ * and renders the home page with the fetched data.
+ *
+ * @param {Request} req - The Express request object.
+ * @param {Response} res - The Express response object.
+ * @returns {void}
+ */
 app.get("/", async (req, res) => {
   let country_name = "";
+  /**
+   * Fetches the Wikipedia content of a given country.
+   *
+   * @param {string} countryName - The name of the country.
+   * @returns {Promise<string>} - A promise that resolves to the Wikipedia content of the country.
+   */
   async function getWikiContent(countryName) {
     const treated_text = countryName.replace(/\([^)]+\)/g, "");
     let replacedSpaceText = treated_text.replace(/\s+/g, "_");
@@ -44,6 +60,12 @@ app.get("/", async (req, res) => {
       });
     });
   }
+  /**
+   * Generates a summary of a given text using Generative AI.
+   *
+   * @param {string} page_content - The text to generate the summary from.
+   * @returns {Promise<string>} - A promise that resolves to the generated summary.
+   */
   async function generateSummary(page_content) {
     const MODEL_NAME = "gemini-1.5-pro-latest";
     const genAI = new GoogleGenerativeAI(API_KEY);
@@ -65,6 +87,12 @@ app.get("/", async (req, res) => {
 
     return summaryTextWithoutMarkups;
   }
+  /**
+   * Generates a hint for a given country using Generative AI.
+   *
+   * @param {string} country_name - The name of the country.
+   * @returns {Promise<string>} - A promise that resolves to the generated hint.
+   */
   async function generateHint(country_name) {
     const MODEL_NAME = "gemini-1.5-pro-latest";
     const genAI = new GoogleGenerativeAI(API_KEY);
@@ -80,14 +108,21 @@ app.get("/", async (req, res) => {
     const result = await chat.sendMessage(
       `Escreva uma dica em uma frase sobre ${country_name}, mas que não contenha a palavra ${country_name}`
     );
-    // Remove os caracteres # e *
+    // Remove # e *
     let hintTextWithoutMarkups = result.response.text().replace(/[#*]/g, "");
 
-    // Remove quebras de linha duplicadas
+    // Remove double break lines
     hintTextWithoutMarkups = hintTextWithoutMarkups.replace(/\n\s*\n/g, "\n\n");
 
     return hintTextWithoutMarkups;
   }
+  /**
+   * The main function to run the application.
+   * Fetches a random country, fetches its Wikipedia content, generates a summary and hint,
+   * and renders the home page with the fetched data.
+   *
+   * @returns {Promise<void>} - A promise that resolves when the main function completes.
+   */
   async function run() {
     const random_index = Math.floor(Math.random() * countries.length);
     country_name = `${countries[random_index].nome}`;
@@ -97,7 +132,7 @@ app.get("/", async (req, res) => {
       const page_content = await getWikiContent(country_name);
       const summary = await generateSummary(page_content);
       const hint = await generateHint(country_name);
-      // Gerar botões de resposta
+      // generate buttons
       let buttonCountries = [country_name];
       while (buttonCountries.length < 4) {
         let randomCountry = countries[Math.floor(Math.random() * countries.length)].nome;
@@ -105,7 +140,7 @@ app.get("/", async (req, res) => {
           buttonCountries.push(randomCountry);
         }
       }
-      // Embaralhar a ordem dos botões
+      // sorting buttons
       for (let i = buttonCountries.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [buttonCountries[i], buttonCountries[j]] = [buttonCountries[j], buttonCountries[i]];
@@ -119,15 +154,16 @@ app.get("/", async (req, res) => {
       });
     } catch (error) {
       console.error("Erro:", error);
-      // Lidar com o erro, como renderizar uma página de erro
+      // render page when error is returned
       res.render("error.hbs", { error: error });
     }
   }
 
-  // Chamar a função run
+  // call the main function
   await run();
 });
 
+// start the server
 app.listen(3000, () => {
   console.log("Server running on 3000");
 });
