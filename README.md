@@ -50,7 +50,7 @@ Com o ```country_name``` é feito um tratamento da variável para que se inclua 
 
 Relacionado ao web scrapping, o conteúdo da página Wikipédia é armazenado na variável ```page_content``` e a curiosidade gerada na tela depois de submetida a resposta do quiz é gerada pelo comando ```const result = await chat.sendMessage(`Escreva uma breve curiosidade sobre ${page_content}`);```
 
-O ```page_content``` também recebe tratamento para remover os caracteres especiais de Markdown que recebe no output.
+O ```result``` também recebe tratamento para remover os caracteres especiais de Markdown que recebe no output.
 
 Com esse método, por mais que um país seja sorteado mais de uma vez, a dica e a curiosidade será sempre uma novidade!
 
