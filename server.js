@@ -79,10 +79,10 @@ app.get("/", async (req, res) => {
     ];
     const chat = model.startChat({ generationConfig, safetySettings });
     const result = await chat.sendMessage(`Escreva uma breve curiosidade sobre "${page_content}" apenas utilizando o conteúdo do texto. Adote um linguajar interessante e carismático.`);
-    // Remove os caracteres # e *
+    // Remove # and * from Markdown format
     let summaryTextWithoutMarkups = result.response.text().replace(/[#*]/g, "");
 
-    // Remove quebras de linha duplicadas
+    // Remove double break lines
     summaryTextWithoutMarkups = summaryTextWithoutMarkups.replace(/\n\s*\n/g, "\n\n");
 
     return summaryTextWithoutMarkups;
@@ -108,7 +108,7 @@ app.get("/", async (req, res) => {
     const result = await chat.sendMessage(
       `Escreva uma dica em uma frase sobre "${country_name}", mas que não contenha a palavra "${country_name}". Extraia essa informação do texto "${page_content}", sem incluir informações que não estejam presentes nele.`
     );
-    // Remove # e *
+    // Remove # and * from Markdown format
     let hintTextWithoutMarkups = result.response.text().replace(/[#*]/g, "");
 
     // Remove double break lines
