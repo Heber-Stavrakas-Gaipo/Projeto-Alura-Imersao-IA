@@ -21,13 +21,13 @@
 
 Meu nome é Héber Stavrakas Gaipo, sou estudante de Engenharia da Computação e estou participando da Imersão Alura + Google, 2ª edição - 2024.
 
-<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px;">
-  <a href="https://www.linkedin.com/in/heber-stavrakas-gaipo/" style="margin: 0.4rem 0;"><img aLign="center" alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://www.instagram.com/heber_stavrakas/" style="margin: 0.4rem 0;"><img aLign="center" alt="Instagram" src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
-  <a href="https://github.com/Heber-Stavrakas-Gaipo" style="margin: 0.4rem 0;"><img aLign="center" alt="GitHub" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://github.com/Heber-Stavrakas-Gaipo/Portfolio" style="margin: 0.4rem 0;"><img aLign="center" alt="Portfolio" src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://heber-stavrakas-gaipo.github.io/DevLinksTree/" style="margin: 0.4rem 0;"><img aLign="center" alt="DevLinksTree" src="https://img.shields.io/badge/DevLinksTree-hhh?style=for-the-badge" /></a>
-  <a href="mailto:contatohebergaipo@gmail.com" style="margin: 0.4rem 0;"><img aLign="center" alt="Gmail" src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" /></a>
+<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px">
+  <a href="https://www.linkedin.com/in/heber-stavrakas-gaipo/" style="margin: 4px;"><img aLign="center" alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://www.instagram.com/heber_stavrakas/" style="margin: 4px;"><img aLign="center" alt="Instagram" src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+  <a href="https://github.com/Heber-Stavrakas-Gaipo" style="margin: 4px;"><img aLign="center" alt="GitHub" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://github.com/Heber-Stavrakas-Gaipo/Portfolio" style="margin: 4px;"><img aLign="center" alt="Portfolio" src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://heber-stavrakas-gaipo.github.io/DevLinksTree/" style="margin: 4px;"><img aLign="center" alt="DevLinksTree" src="https://img.shields.io/badge/DevLinksTree-hhh?style=for-the-badge" /></a>
+  <a href="mailto:contatohebergaipo@gmail.com" style="margin: 4px;"><img aLign="center" alt="Gmail" src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" /></a>
 </div>
 
 ## Objetivo
@@ -79,7 +79,7 @@ Os 4 botões do quiz são 1 para a resposta correta e os outros 3 possuem valore
 
 Arquivos mencionados na seção:
 
-<div aLign="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+<div aLign="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 4px">
   <a aLign="center" style="margin: 4px;" href="./countries.json"><img src="https://img.shields.io/badge/countries.json-5E5C5C?style=for-the-badge&logo=json&logoColor=white"/></a>
   <a aLign="center" style="margin: 4px;" href="./server.js"><img src="https://img.shields.io/badge/server.js-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
 </div>
@@ -88,7 +88,7 @@ Arquivos mencionados na seção:
 
 ## Tecnologias
 
-<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px">
   <img aLign="center" style="margin: 4px;" alt="ExpressJS" src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" />
   <img aLign="center" style="margin: 4px;" alt="Gemini" src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=fff" />
   <img aLign="center" style="margin: 4px;" alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
@@ -101,7 +101,7 @@ Arquivos mencionados na seção:
 
 ## Referencias
 
-<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px">
   <img aLign="center" style="margin: 4px;" alt="FreeCodeCamp" src="https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green" />
   <img aLign="center" style="margin: 4px;" alt="NPM" src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" />
   <img aLign="center" style="margin: 4px;" alt="W3Schools" src="https://img.shields.io/badge/W3Schools-04AA6D?style=for-the-badge&logo=W3Schools&logoColor=white" />
