@@ -46,6 +46,9 @@ Através desse método pode-se gerar rotas com quizes sobre diversos assuntos, p
 
 Quando a página inicia é sortido um índice dentro do arquivo `countries.json` e seleciona o nome do país de acordo com esse índice e armazena em `country_name`.
 
+- `` const random_index = Math.floor(Math.random() * countries.length);
+country_name = `${countries[random_index].nome}`; ``
+
 É solicitado para a API do Gemini que gere uma dica, da seguinte forma: `` const result = await chat.sendMessage(
       `Escreva uma dica em uma frase sobre "${country_name}", mas que não contenha a palavra "${country_name}". Extraia essa informação do texto "${page_content}", sem incluir informações que não estejam presentes nele.`
     );  ``.
@@ -76,33 +79,33 @@ Os 4 botões do quiz são 1 para a resposta correta e os outros 3 possuem valore
 
 Arquivos mencionados na seção:
 
-<div aLign="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 8px;">
-  <a href="./countries.json"><img src="https://img.shields.io/badge/countries.json-5E5C5C?style=for-the-badge&logo=json&logoColor=white"/></a>
-  <a href="./server.js"><img src="https://img.shields.io/badge/server.js-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
+<div aLign="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+  <a aLign="center" style="margin: 4px;" href="./countries.json"><img src="https://img.shields.io/badge/countries.json-5E5C5C?style=for-the-badge&logo=json&logoColor=white"/></a>
+  <a aLign="center" style="margin: 4px;" href="./server.js"><img src="https://img.shields.io/badge/server.js-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>
 </div>
 
 ---
 
 ## Tecnologias
 
-<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px">
-  <img aLign="center" alt="ExpressJS" src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img aLign="center" alt="Gemini" src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=fff" />
-  <img aLign="center" alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
-  <img aLign="center" alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
-  <img aLign="center" alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-  <img aLign="center" alt="Markdown" src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white" />
-  <img aLign="center" alt="NodeJS" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img aLign="center" alt="VSCode" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+  <img aLign="center" style="margin: 4px;" alt="ExpressJS" src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="Gemini" src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=fff" />
+  <img aLign="center" style="margin: 4px;" alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+  <img aLign="center" style="margin: 4px;" alt="Markdown" src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="NodeJS" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="VSCode" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
 </div>
 
 ## Referencias
 
-<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px">
-  <img aLign="center" alt="FreeCodeCamp" src="https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green" />
-  <img aLign="center" alt="NPM" src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" />
-  <img aLign="center" alt="W3Schools" src="https://img.shields.io/badge/W3Schools-04AA6D?style=for-the-badge&logo=W3Schools&logoColor=white" />
-  <img aLign="center" alt="Wikipedia" src="https://img.shields.io/badge/Wikipedia-%23000000.svg?style=for-the-badge&logo=wikipedia&logoColor=white" />
+<div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+  <img aLign="center" style="margin: 4px;" alt="FreeCodeCamp" src="https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green" />
+  <img aLign="center" style="margin: 4px;" alt="NPM" src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="W3Schools" src="https://img.shields.io/badge/W3Schools-04AA6D?style=for-the-badge&logo=W3Schools&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="Wikipedia" src="https://img.shields.io/badge/Wikipedia-%23000000.svg?style=for-the-badge&logo=wikipedia&logoColor=white" />
 </div>
 
 ## Exemplos
