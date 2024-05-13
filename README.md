@@ -111,10 +111,10 @@ Arquivos mencionados na seção:
 ## Exemplos
 
 <div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px;">
-  <img style="width: 500px;" alt="Chile" src="./public/images/Chile.png" />
-  <img style="width: 500px;" alt="Equador" src="./public/images/Equador.png" />
-  <img style="width: 500px;" alt="Gana" src="./public/images/Gana.png" />
-  <img style="width: 500px;" alt="Honduras" src="./public/images/Honduras.png" />
-  <img style="width: 500px;" alt="Kuwait" src="./public/images/Kuwait.png" />
-  <img style="width: 500px;" alt="Noruega" src="./public/images/Noruega.png" />
+  <img style="width: 49.2755222320%;" alt="Chile" src="./public/images/Chile.png" />
+  <img style="width: 49.2755222320%;" alt="Equador" src="./public/images/Equador.png" />
+  <img style="width: 49.2755222320%;" alt="Gana" src="./public/images/Gana.png" />
+  <img style="width: 49.2755222320%;" alt="Honduras" src="./public/images/Honduras.png" />
+  <img style="width: 49.2755222320%;" alt="Kuwait" src="./public/images/Kuwait.png" />
+  <img style="width: 49.2755222320%;" alt="Noruega" src="./public/images/Noruega.png" />
 </div>
