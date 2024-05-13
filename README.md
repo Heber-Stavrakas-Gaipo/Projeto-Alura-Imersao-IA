@@ -93,6 +93,7 @@ Arquivos mencionados na seção:
   <img aLign="center" style="margin: 4px;" alt="Gemini" src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=fff" />
   <img aLign="center" style="margin: 4px;" alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
   <img aLign="center" style="margin: 4px;" alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
+  <img aLign="center" style="margin: 4px;" alt="GitHub" src="https://img.shields.io/badge/Handlebars%20js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black" />
   <img aLign="center" style="margin: 4px;" alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
   <img aLign="center" style="margin: 4px;" alt="Markdown" src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white" />
   <img aLign="center" style="margin: 4px;" alt="NodeJS" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
@@ -111,10 +112,10 @@ Arquivos mencionados na seção:
 ## Exemplos
 
 <div aLign="center" style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px;">
-  <img style="width: 49%;" alt="Chile" src="./public/images/Chile.png" />
-  <img style="width: 49%;" alt="Equador" src="./public/images/Equador.png" />
-  <img style="width: 49%;" alt="Gana" src="./public/images/Gana.png" />
-  <img style="width: 49%;" alt="Honduras" src="./public/images/Honduras.png" />
-  <img style="width: 49%;" alt="Kuwait" src="./public/images/Kuwait.png" />
-  <img style="width: 49%;" alt="Noruega" src="./public/images/Noruega.png" />
+  <img alt="Chile" src="./public/images/Chile.png" />
+  <img alt="Equador" src="./public/images/Equador.png" />
+  <img alt="Gana" src="./public/images/Gana.png" />
+  <img alt="Honduras" src="./public/images/Honduras.png" />
+  <img alt="Kuwait" src="./public/images/Kuwait.png" />
+  <img alt="Noruega" src="./public/images/Noruega.png" />
 </div>
