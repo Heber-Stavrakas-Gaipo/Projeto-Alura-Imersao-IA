@@ -49,6 +49,7 @@ div#container h1 {
 
 h2#country-name {
     font-size: 2rem;
+    text-align: center;
 }
 
 div#container img {
@@ -86,7 +87,6 @@ div#container #buttons {
     flex-wrap: wrap;
 }
 
-
 /* Buttons style */
 .quiz-button {
     background-color: #4CAF50;
@@ -119,4 +119,20 @@ div#container #buttons {
 .quiz-button:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
     /* Sombra mais intensa ao passar o mouse */
+}
+
+@media (max-width: 560px) {
+    div#container h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    div#container h1 {
+        font-size: 1rem;
+    }
+
+    div#container h2#country-name {
+        font-size: 1rem;
+    }
 }
