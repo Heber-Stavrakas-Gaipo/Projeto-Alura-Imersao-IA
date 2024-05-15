@@ -77,6 +77,10 @@ Os 4 botões do quiz são 1 para a resposta correta e os outros 3 possuem valore
 
 ---
 
+<div aLign="center"><a href="https://github.com/Heber-Stavrakas-Gaipo/artigo-webscraping-com-IA/blob/main/Artigo_Web-Scraping.md">📖 Clique para saber mais sobre Web Scraping com NodeJS</a></div>
+
+---
+
 Arquivos mencionados na seção:
 
 <div aLign="center" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 4px">
